@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftRestoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

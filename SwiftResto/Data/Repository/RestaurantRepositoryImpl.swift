@@ -16,6 +16,11 @@ struct RestaurantRepositoryImpl: RestaurantRepository {
         return restaurants
     }
     
+    func searchRestaurants(query: String) async throws -> [RestaurantDto] {
+        let restaurants = try await dataSource.searchRestaurants(query: query).restaurants
+        return restaurants
+    }
+    
     func getRestaurantDetail(id: String) async throws -> RestaurantDetailDto {
         let restaurant = try await dataSource.getRestaurantDetail(id: id).restaurant
         return restaurant

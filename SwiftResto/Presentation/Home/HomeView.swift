@@ -23,15 +23,22 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                List {
-                    ForEach(viewModel.restaurants) { item in
-                        NavigationLink {
-                            DetailRestaurantView(id: item.id)
-                        } label: {
-                            Text(item.name)
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.restaurants) { item in
+                            NavigationLink {
+                                DetailRestaurantView(id: item.id)
+                            } label: {
+                                RestaurantItem(restaurant: item)
+                                    .foregroundColor(.black)
+                            }
+                            .listRowSeparator(.hidden)
                         }
+                        .frame(maxWidth: .infinity)
                     }
                 }
+                .frame(maxWidth: .infinity)
+                .listStyle(PlainListStyle())
                 .task {
                     await viewModel.getRestaurants()
                 }
@@ -43,6 +50,7 @@ struct HomeView: View {
                     ProgressView()
                 }
             }
+            .navigationTitle("Home")
         }
     }
 }

@@ -14,6 +14,12 @@ struct RestaurantsResponse: Decodable {
     let restaurants: [RestaurantDto]
 }
 
+struct RestaurantSearchResponse: Decodable {
+    let error: Bool
+    let founded: Int
+    let restaurants: [RestaurantDto]
+}
+
 struct RestaurantDto: Decodable {
     let id: String
     let name: String

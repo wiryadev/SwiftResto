@@ -30,7 +30,8 @@
 		43610517296EA8EC006EBED9 /* GetRestaurantByIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43610516296EA8EC006EBED9 /* GetRestaurantByIdUseCase.swift */; };
 		43610519296EB59F006EBED9 /* SearchRestaurantsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43610518296EB59F006EBED9 /* SearchRestaurantsUseCase.swift */; };
 		4361051C296EB5EB006EBED9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4361051B296EB5EB006EBED9 /* SearchViewModel.swift */; };
-		43610520296EBA79006EBED9 /* RestaurantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4361051F296EBA79006EBED9 /* RestaurantItem.swift */; };
+		43610520296EBA79006EBED9 /* RestaurantItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4361051F296EBA79006EBED9 /* RestaurantItemView.swift */; };
+		43610524296EE8AC006EBED9 /* ReviewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43610523296EE8AC006EBED9 /* ReviewItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +58,8 @@
 		43610516296EA8EC006EBED9 /* GetRestaurantByIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRestaurantByIdUseCase.swift; sourceTree = "<group>"; };
 		43610518296EB59F006EBED9 /* SearchRestaurantsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRestaurantsUseCase.swift; sourceTree = "<group>"; };
 		4361051B296EB5EB006EBED9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		4361051F296EBA79006EBED9 /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
+		4361051F296EBA79006EBED9 /* RestaurantItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItemView.swift; sourceTree = "<group>"; };
+		43610523296EE8AC006EBED9 /* ReviewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,7 +251,8 @@
 		4361051E296EBA67006EBED9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				4361051F296EBA79006EBED9 /* RestaurantItem.swift */,
+				4361051F296EBA79006EBED9 /* RestaurantItemView.swift */,
+				43610523296EE8AC006EBED9 /* ReviewItemView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -334,7 +337,7 @@
 				4361050D296E7ED2006EBED9 /* HomeView.swift in Sources */,
 				436104FB296E6C06006EBED9 /* RestaurantRepository.swift in Sources */,
 				436104EE296E5C05006EBED9 /* ReviewDto.swift in Sources */,
-				43610520296EBA79006EBED9 /* RestaurantItem.swift in Sources */,
+				43610520296EBA79006EBED9 /* RestaurantItemView.swift in Sources */,
 				43610510296E9D3E006EBED9 /* AboutView.swift in Sources */,
 				436104D4296E57C3006EBED9 /* ContentView.swift in Sources */,
 				4361051C296EB5EB006EBED9 /* SearchViewModel.swift in Sources */,
@@ -351,6 +354,7 @@
 				43610500296E76BC006EBED9 /* RestaurantRepositoryImpl.swift in Sources */,
 				436104F5296E5DB2006EBED9 /* Constants.swift in Sources */,
 				436104FD296E6C36006EBED9 /* Result.swift in Sources */,
+				43610524296EE8AC006EBED9 /* ReviewItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

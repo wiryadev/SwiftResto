@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RestaurantItem: View {
+struct RestaurantItemView: View {
     
     let restaurant: Restaurant
     
@@ -44,7 +44,7 @@ struct RestaurantItem: View {
 
 struct RestaurantItem_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantItem(
+        RestaurantItemView(
             restaurant: Restaurant(
                 id: "rqdv5juczeskfw1e867",
                 name: "Melting Pot",

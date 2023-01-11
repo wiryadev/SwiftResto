@@ -29,7 +29,7 @@ struct HomeView: View {
                             NavigationLink {
                                 DetailRestaurantView(id: item.id)
                             } label: {
-                                RestaurantItem(restaurant: item)
+                                RestaurantItemView(restaurant: item)
                                     .foregroundColor(.black)
                             }
                             .listRowSeparator(.hidden)

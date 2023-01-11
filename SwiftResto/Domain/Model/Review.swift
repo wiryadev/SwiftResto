@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Review {
+struct Review: Hashable {
     let name: String
     let review: String
     let date: String

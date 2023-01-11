@@ -21,7 +21,8 @@ struct GetAllRestaurantUseCase {
                     picture: "\(Constants.MEDIUM_PICTURE_URL)\(item.pictureId)",
                     location: item.city,
                     address: nil,
-                    rating: item.rating
+                    rating: item.rating,
+                    reviews: []
                 )
             }
             return Result.Success(data: restaurants)

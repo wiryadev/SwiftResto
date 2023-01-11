@@ -11,7 +11,7 @@ import Alamofire
 struct RestaurantRemoteDataSource {
     
     func getRestaurants() async throws -> RestaurantsResponse {
-        return try await getResponseFromApi(stringUrl: "\(Constants.BASE_URL)list")
+        return try await getResponseFromApi(stringUrl: "\(Constants.BASE_URL)/list")
     }
     
     func getRestaurantDetail(id: String) async throws -> RestaurantDetailResponse {

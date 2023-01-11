@@ -21,21 +21,27 @@ struct HomeView: View {
     }
     
     var body: some View {
-        ZStack {
-            List {
-                ForEach(viewModel.restaurants) { item in
-                    Text(item.name)
+        NavigationStack {
+            ZStack {
+                List {
+                    ForEach(viewModel.restaurants) { item in
+                        NavigationLink {
+                            DetailRestaurantView(id: item.id)
+                        } label: {
+                            Text(item.name)
+                        }
+                    }
                 }
-            }
-            .task {
-                await viewModel.getRestaurants()
-            }
-            .alert("Error", isPresented: isError) {
-            } message: {
-                Text(viewModel.errorMessage)
-            }
-            if (viewModel.isLoading) {
-                ProgressView()
+                .task {
+                    await viewModel.getRestaurants()
+                }
+                .alert("Error", isPresented: isError) {
+                } message: {
+                    Text(viewModel.errorMessage)
+                }
+                if (viewModel.isLoading) {
+                    ProgressView()
+                }
             }
         }
     }

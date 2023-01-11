@@ -15,5 +15,5 @@ struct Restaurant: Identifiable {
     let location: String
     let address: String?
     let rating: Double
-    let reviews: [Review] = []
+    let reviews: [Review]
 }

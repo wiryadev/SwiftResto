@@ -37,5 +37,5 @@ struct RestaurantDetailDto: Decodable {
     let city: String
     let address: String
     let rating: Double
-    let reviews: [ReviewDto]
+    let customerReviews: [ReviewDto]
 }

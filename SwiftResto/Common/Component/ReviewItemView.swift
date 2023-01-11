@@ -28,7 +28,6 @@ struct ReviewItemView: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 1)
         .padding(.horizontal, 16)
-        .background(Color.red)
     }
 }
 

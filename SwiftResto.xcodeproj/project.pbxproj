@@ -32,6 +32,7 @@
 		4361051C296EB5EB006EBED9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4361051B296EB5EB006EBED9 /* SearchViewModel.swift */; };
 		43610520296EBA79006EBED9 /* RestaurantItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4361051F296EBA79006EBED9 /* RestaurantItemView.swift */; };
 		43610524296EE8AC006EBED9 /* ReviewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43610523296EE8AC006EBED9 /* ReviewItemView.swift */; };
+		43610526296EF06A006EBED9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43610525296EF06A006EBED9 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		4361051B296EB5EB006EBED9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		4361051F296EBA79006EBED9 /* RestaurantItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItemView.swift; sourceTree = "<group>"; };
 		43610523296EE8AC006EBED9 /* ReviewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItemView.swift; sourceTree = "<group>"; };
+		43610525296EF06A006EBED9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				4361051B296EB5EB006EBED9 /* SearchViewModel.swift */,
+				43610525296EF06A006EBED9 /* SearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				436104D2296E57C3006EBED9 /* SwiftRestoApp.swift in Sources */,
 				43610519296EB59F006EBED9 /* SearchRestaurantsUseCase.swift in Sources */,
 				43610505296E7933006EBED9 /* GetAllRestaurantUseCase.swift in Sources */,
+				43610526296EF06A006EBED9 /* SearchView.swift in Sources */,
 				43610515296EA89C006EBED9 /* DetailRestaurantViewModel.swift in Sources */,
 				4361050B296E7D4A006EBED9 /* HomeViewModel.swift in Sources */,
 				436104E2296E5956006EBED9 /* Restaurant.swift in Sources */,

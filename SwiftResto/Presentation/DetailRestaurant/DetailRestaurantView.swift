@@ -73,7 +73,7 @@ struct DetailRestaurantView: View {
                 }
                 .padding(.leading, 16)
                 
-                LazyVStack {
+                VStack {
                     ForEach(reviews, id: \.self) { item in
                         ReviewItemView(review: item)
                     }

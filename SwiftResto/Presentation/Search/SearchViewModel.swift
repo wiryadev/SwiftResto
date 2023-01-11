@@ -19,6 +19,10 @@ class SearchViewModel: ObservableObject {
     @Published var errorMessage = ""
     @Published var isLoading = false
     
+    func resetList() {
+        self.restaurants = []
+    }
+    
     func findRestaurants(query: String) async {
         isLoading = true
         let result = await searchRestaurants.execute(query: query)

@@ -16,7 +16,7 @@ struct DetailRestaurantView: View {
     var body: some View {
         ScrollView {
             VStack {
-                if (viewModel.isLoading) {
+                if viewModel.isLoading {
                     ProgressView()
                 } else {
                     // MARK: Image

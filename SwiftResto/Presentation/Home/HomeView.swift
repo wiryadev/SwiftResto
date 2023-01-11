@@ -11,30 +11,38 @@ struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
     
-    private var isError: Binding<Bool> {
-        Binding(
-            get: {
-                !self.viewModel.errorMessage.isEmpty
-            },
-            set: {_ in }
-        )
-    }
-    
     var body: some View {
         NavigationStack {
             ZStack {
                 ScrollView {
-                    LazyVStack {
-                        ForEach(viewModel.restaurants) { item in
-                            NavigationLink {
-                                DetailRestaurantView(id: item.id)
-                            } label: {
-                                RestaurantItemView(restaurant: item)
-                                    .foregroundColor(.black)
+                    if viewModel.errorMessage.isEmpty {
+                        LazyVStack {
+                            ForEach(viewModel.restaurants) { item in
+                                NavigationLink {
+                                    DetailRestaurantView(id: item.id)
+                                } label: {
+                                    RestaurantItemView(restaurant: item)
+                                        .foregroundColor(.black)
+                                }
+                                .listRowSeparator(.hidden)
                             }
-                            .listRowSeparator(.hidden)
+                            .frame(maxWidth: .infinity)
                         }
-                        .frame(maxWidth: .infinity)
+                    } else {
+                        VStack {
+                            Image(systemName: "exclamationmark.icloud")
+                            Text(viewModel.errorMessage)
+                                .padding(.top, 8)
+                                .padding(.bottom, 16)
+                            Button {
+                                Task {
+                                    await viewModel.getRestaurants()
+                                }
+                            } label: {
+                                Text("Retry")
+                            }
+                        }
+                        .padding(.vertical, 64)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -42,11 +50,7 @@ struct HomeView: View {
                 .task {
                     await viewModel.getRestaurants()
                 }
-                .alert("Error", isPresented: isError) {
-                } message: {
-                    Text(viewModel.errorMessage)
-                }
-                if (viewModel.isLoading) {
+                if viewModel.isLoading {
                     ProgressView()
                 }
             }

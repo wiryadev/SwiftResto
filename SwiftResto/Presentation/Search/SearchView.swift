@@ -17,8 +17,8 @@ struct SearchView: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    if (searchText.isEmpty
-                        && viewModel.restaurants.isEmpty) {
+                    if searchText.isEmpty
+                        && viewModel.restaurants.isEmpty {
                         VStack {
                             Image(systemName: "rectangle.and.text.magnifyingglass")
                             Text("Try to search something first")
@@ -26,7 +26,7 @@ struct SearchView: View {
                         .padding(.vertical, 128)
                         
                     } else {
-                        if (viewModel.isLoading) {
+                        if viewModel.isLoading {
                             ProgressView()
                         } else {
                             LazyVStack {
@@ -57,7 +57,7 @@ struct SearchView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .listStyle(PlainListStyle())
-                if (viewModel.isLoading) {
+                if viewModel.isLoading {
                     ProgressView()
                 }
             }

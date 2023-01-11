@@ -9,12 +9,22 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        VStack {
-            Image("about-pic")
-                .clipShape(Circle())
-            
-            Text("Abrar Wiryawan")
-            Text("abrarwiryawan@gmail.com")
+        NavigationStack {
+            VStack {
+                Image("about-pic")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 192, height: 192)
+                    .clipShape(Circle())
+                    .padding(.bottom, 16)
+                
+                Text("Abrar Wiryawan")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .fontDesign(.rounded)
+                Text("abrarwiryawan@gmail.com")
+            }
+            .navigationTitle("About")
         }
     }
 }

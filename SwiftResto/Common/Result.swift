@@ -8,6 +8,6 @@
 import Foundation
 
 public enum Result<T> {
-    case Success(data: T)
-    case Error(message: String)
+    case success(data: T)
+    case error(message: String)
 }

@@ -25,9 +25,9 @@ struct GetAllRestaurantUseCase {
                     reviews: []
                 )
             }
-            return Result.Success(data: restaurants)
+            return Result.success(data: restaurants)
         } catch (let error) {
-            return Result.Error(message: error.localizedDescription)
+            return Result.error(message: error.localizedDescription)
         }
     }
     

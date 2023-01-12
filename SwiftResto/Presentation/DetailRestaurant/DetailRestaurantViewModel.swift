@@ -7,29 +7,32 @@
 
 import Foundation
 
-@MainActor
-class DetailRestaurantViewModel: ObservableObject {
+extension DetailRestaurantView {
     
-    private let getRestaurantById = GetRestaurantById(
-        repository: RestaurantRepositoryImpl(
-            dataSource: RestaurantRemoteDataSource()
+    @MainActor
+    class DetailRestaurantViewModel: ObservableObject {
+        
+        private let getRestaurantById = GetRestaurantById(
+            repository: RestaurantRepositoryImpl(
+                dataSource: RestaurantRemoteDataSource()
+            )
         )
-    )
-    
-    @Published var restaurant: Restaurant? = nil
-    @Published var errorMessage = ""
-    @Published var isLoading = false
-    
-    func getRestaurantDetail(id: String) async {
-        isLoading = true
-        let result = await getRestaurantById.execute(id: id)
-        switch result {
-        case .Success(let data):
-            self.restaurant = data
-            self.errorMessage = ""
-        case .Error(let message):
-            self.errorMessage = message
+        
+        @Published var restaurant: Restaurant? = nil
+        @Published var errorMessage = ""
+        @Published var isLoading = false
+        
+        func getRestaurantDetail(id: String) async {
+            isLoading = true
+            let result = await getRestaurantById.execute(id: id)
+            switch result {
+            case .success(let data):
+                self.restaurant = data
+                self.errorMessage = ""
+            case .error(let message):
+                self.errorMessage = message
+            }
+            isLoading = false
         }
-        isLoading = false
     }
 }

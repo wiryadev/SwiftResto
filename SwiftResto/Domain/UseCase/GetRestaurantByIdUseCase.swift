@@ -29,9 +29,9 @@ struct GetRestaurantById {
                     )
                 })
             )
-            return Result.Success(data: restaurant)
+            return Result.success(data: restaurant)
         } catch (let error) {
-            return Result.Error(message: error.localizedDescription)
+            return Result.error(message: error.localizedDescription)
         }
     }
 }
